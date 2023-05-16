@@ -1,5 +1,4 @@
 import { IList } from './IList';
-import { ICard } from './ICard';
 
 export interface IBoard {
   id: number;
@@ -8,7 +7,9 @@ export interface IBoard {
 }
 
 export interface BoardProps {
-  board: {
+  boards: {
+    map: any;
+    length: number;
     title: string;
     lists: IList[];
   };
@@ -21,8 +22,6 @@ export interface CardsProps {
         cards: [
           ICard: {
             position: number;
-            // id: number;
-            // title: string;
           }
         ];
       }
